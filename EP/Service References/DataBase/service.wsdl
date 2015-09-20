@@ -12,16 +12,35 @@
   <wsdl:message name="IDataBase_Authorizate_OutputMessage">
     <wsdl:part name="parameters" element="tns:AuthorizateResponse" />
   </wsdl:message>
+  <wsdl:message name="IDataBase_Registration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registration" />
+  </wsdl:message>
+  <wsdl:message name="IDataBase_Registration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrationResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDataBase">
     <wsdl:operation name="Authorizate">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataBase/Authorizate" message="tns:IDataBase_Authorizate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDataBase/AuthorizateResponse" message="tns:IDataBase_Authorizate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataBase/Registration" message="tns:IDataBase_Registration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataBase/RegistrationResponse" message="tns:IDataBase_Registration_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDataBase" type="tns:IDataBase">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="Authorizate">
       <soap:operation soapAction="http://tempuri.org/IDataBase/Authorizate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://tempuri.org/IDataBase/Registration" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

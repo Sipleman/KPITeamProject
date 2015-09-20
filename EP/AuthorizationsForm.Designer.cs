@@ -53,7 +53,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.97163F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.02837F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.Controls.Add(this.usernameBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.passwordBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.passwordlabel, 0, 2);
@@ -80,9 +80,9 @@
             this.usernameBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.usernameBox.Location = new System.Drawing.Point(141, 56);
+            this.usernameBox.Location = new System.Drawing.Point(140, 56);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(170, 20);
+            this.usernameBox.Size = new System.Drawing.Size(169, 20);
             this.usernameBox.TabIndex = 2;
             // 
             // passwordBox
@@ -90,10 +90,10 @@
             this.passwordBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordBox.Location = new System.Drawing.Point(141, 82);
+            this.passwordBox.Location = new System.Drawing.Point(140, 82);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(170, 20);
+            this.passwordBox.Size = new System.Drawing.Size(169, 20);
             this.passwordBox.TabIndex = 3;
             // 
             // passwordlabel
@@ -106,7 +106,7 @@
             this.passwordlabel.Location = new System.Drawing.Point(2, 81);
             this.passwordlabel.Margin = new System.Windows.Forms.Padding(2);
             this.passwordlabel.Name = "passwordlabel";
-            this.passwordlabel.Size = new System.Drawing.Size(134, 24);
+            this.passwordlabel.Size = new System.Drawing.Size(133, 24);
             this.passwordlabel.TabIndex = 1;
             this.passwordlabel.Text = "Password: ";
             this.passwordlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,7 +121,7 @@
             this.namelabel.Location = new System.Drawing.Point(2, 55);
             this.namelabel.Margin = new System.Windows.Forms.Padding(2);
             this.namelabel.Name = "namelabel";
-            this.namelabel.Size = new System.Drawing.Size(134, 22);
+            this.namelabel.Size = new System.Drawing.Size(133, 22);
             this.namelabel.TabIndex = 0;
             this.namelabel.Text = "Name:";
             this.namelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,7 +133,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.logoBox.Location = new System.Drawing.Point(3, 3);
             this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(132, 47);
+            this.logoBox.Size = new System.Drawing.Size(131, 47);
             this.logoBox.TabIndex = 4;
             this.logoBox.TabStop = false;
             // 
@@ -144,10 +144,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.appNameLabel.AutoSize = true;
             this.appNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.appNameLabel.Location = new System.Drawing.Point(140, 2);
+            this.appNameLabel.Location = new System.Drawing.Point(139, 2);
             this.appNameLabel.Margin = new System.Windows.Forms.Padding(2);
             this.appNameLabel.Name = "appNameLabel";
-            this.appNameLabel.Size = new System.Drawing.Size(172, 49);
+            this.appNameLabel.Size = new System.Drawing.Size(171, 49);
             this.appNameLabel.TabIndex = 5;
             this.appNameLabel.Text = "KPITeamProject";
             this.appNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,7 +159,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.registrationButton.Location = new System.Drawing.Point(3, 267);
             this.registrationButton.Name = "registrationButton";
-            this.registrationButton.Size = new System.Drawing.Size(132, 29);
+            this.registrationButton.Size = new System.Drawing.Size(131, 29);
             this.registrationButton.TabIndex = 6;
             this.registrationButton.Text = "Registration";
             this.registrationButton.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             this.logInButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.logInButton.Location = new System.Drawing.Point(141, 267);
+            this.logInButton.Location = new System.Drawing.Point(140, 267);
             this.logInButton.Name = "logInButton";
-            this.logInButton.Size = new System.Drawing.Size(170, 29);
+            this.logInButton.Size = new System.Drawing.Size(169, 29);
             this.logInButton.TabIndex = 7;
             this.logInButton.Text = "Log In";
             this.logInButton.UseVisualStyleBackColor = true;
@@ -183,7 +183,7 @@
             this.nameCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameCheckBox.Location = new System.Drawing.Point(317, 56);
+            this.nameCheckBox.Location = new System.Drawing.Point(315, 56);
             this.nameCheckBox.MaximumSize = new System.Drawing.Size(12, 12);
             this.nameCheckBox.MinimumSize = new System.Drawing.Size(16, 16);
             this.nameCheckBox.Name = "nameCheckBox";
@@ -196,7 +196,7 @@
             this.passwordCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.passwordCheckBox.Location = new System.Drawing.Point(317, 82);
+            this.passwordCheckBox.Location = new System.Drawing.Point(315, 82);
             this.passwordCheckBox.MaximumSize = new System.Drawing.Size(16, 16);
             this.passwordCheckBox.MinimumSize = new System.Drawing.Size(12, 12);
             this.passwordCheckBox.Name = "passwordCheckBox";

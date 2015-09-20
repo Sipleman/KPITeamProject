@@ -12,16 +12,16 @@ namespace EP
 {
     public partial class AuthorizationsForm : Form
     {
-        DataBase.DataBaseClient client;
         public AuthorizationsForm()
         {
             InitializeComponent();
-            client = new DataBase.DataBaseClient();
+            
         }
 
         private void logInButton_Click(object sender, EventArgs e)
         {
-            //DataBase.DataBaseClient client = new DataBase.DataBaseClient();
+            DataBase.DataBaseClient client = new DataBase.DataBaseClient();
+            client.Open();
             string username = usernameBox.Text;
             string password = passwordBox.Text;
             int tmpUserId = client.Authorizate(username, password);
@@ -36,6 +36,7 @@ namespace EP
                         passwordCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         nameCheckBox.Image = fail;
                         passwordCheckBox.Image = fail;
+                        client.Close();
                         break;
                     }
                 case -2:
@@ -47,10 +48,12 @@ namespace EP
                         passwordCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         nameCheckBox.Image = suceed;
                         passwordCheckBox.Image = fail;
+                        client.Close();
                         break;
                     }
                 default:
                     MessageBox.Show("Suceed!");
+                    client.Close();
                     this.Close();
                     break;
             }
@@ -58,7 +61,32 @@ namespace EP
 
         private void registrationButton_Click(object sender, EventArgs e)
         {
-
+            DataBase.DataBaseClient client = new DataBase.DataBaseClient();
+            client.Open();
+            string username = usernameBox.Text;
+            string password = passwordBox.Text;
+            int tmpUserId = client.Registration(username, password);
+            switch (tmpUserId)
+            {
+                case -1:
+                    MessageBox.Show("Error of datatable querty");
+                    break;
+                case -2:
+                    MessageBox.Show("Error in secon query");
+                    break;
+                case -10:
+                    MessageBox.Show("Username already exist");
+                    break;
+                case -20:
+                    MessageBox.Show("Registration will failed");
+                    break;
+                default:
+                    MessageBox.Show("Succesfull registration");
+                    break;
+            }
+            passwordBox.Text = "";
+            usernameBox.Text = "";
+            client.Close();
         }
     }
 }

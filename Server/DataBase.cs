@@ -49,7 +49,24 @@ namespace Server
 
         public int Registration(string username, string password)
         {
-            return 0;
+            DataTable queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
+            if (queryResult == null)
+                return -1;
+            else if (queryResult.Rows.Count > 0)
+                return -10;
+            string passwordHash = GetMD5HashCode(password);
+
+            queryResult = GetQuery(String.Format("insert into users(user_name, user_password) values ('{0}', '{1}')",username, passwordHash));
+            if (queryResult == null)
+                return -2;
+
+            queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
+            if (queryResult == null)
+                return -1;
+            if (queryResult.Rows.Count == 1)
+                return (int)queryResult.Rows[0]["id_user"];
+            else
+                return -20;
         }
 
         private DataTable GetQuery(string query)
@@ -60,9 +77,9 @@ namespace Server
                 _connection.Open();
                 MySqlCommand comm = new MySqlCommand(query, _connection);
                 MySqlDataReader dr = comm.ExecuteReader();
+                dt = new DataTable();
                 if (dr.HasRows)
                 {
-                    dt = new DataTable();
                     dt.Load(dr);
                 }
                 _connection.Close();
