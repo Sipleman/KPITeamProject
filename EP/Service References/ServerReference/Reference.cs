@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EP.ServiceReference1 {
+namespace EP.ServerReference {
     using System.Runtime.Serialization;
     using System;
     
@@ -75,7 +75,7 @@ namespace EP.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServerReference.IService1")]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
@@ -91,19 +91,19 @@ namespace EP.ServiceReference1 {
         System.Threading.Tasks.Task<string> HelloAsync(string input);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        EP.ServiceReference1.CompositeType GetDataUsingDataContract(EP.ServiceReference1.CompositeType composite);
+        EP.ServerReference.CompositeType GetDataUsingDataContract(EP.ServerReference.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<EP.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(EP.ServiceReference1.CompositeType composite);
+        System.Threading.Tasks.Task<EP.ServerReference.CompositeType> GetDataUsingDataContractAsync(EP.ServerReference.CompositeType composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : EP.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : EP.ServerReference.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<EP.ServiceReference1.IService1>, EP.ServiceReference1.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<EP.ServerReference.IService1>, EP.ServerReference.IService1 {
         
         public Service1Client() {
         }
@@ -140,11 +140,11 @@ namespace EP.ServiceReference1 {
             return base.Channel.HelloAsync(input);
         }
         
-        public EP.ServiceReference1.CompositeType GetDataUsingDataContract(EP.ServiceReference1.CompositeType composite) {
+        public EP.ServerReference.CompositeType GetDataUsingDataContract(EP.ServerReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<EP.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(EP.ServiceReference1.CompositeType composite) {
+        public System.Threading.Tasks.Task<EP.ServerReference.CompositeType> GetDataUsingDataContractAsync(EP.ServerReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
     }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EP", "EP\EP.csproj", "{92A202C8-35C8-4F36-BCB6-AF58F4A71724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormClient", "EP\FormClient.csproj", "{92A202C8-35C8-4F36-BCB6-AF58F4A71724}"
 	ProjectSection(ProjectDependencies) = postProject
 		{74A78B25-2EAA-439C-AF89-E427F603F6C1} = {74A78B25-2EAA-439C-AF89-E427F603F6C1}
 	EndProjectSection

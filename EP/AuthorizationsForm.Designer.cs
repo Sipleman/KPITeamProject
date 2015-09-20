@@ -1,6 +1,6 @@
 ﻿namespace EP
 {
-    partial class Form1
+    partial class AuthorizationsForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.

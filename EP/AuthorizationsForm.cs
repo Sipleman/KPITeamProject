@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace EP
 {
-    public partial class Form1 : Form
+    public partial class AuthorizationsForm : Form
     {
-        public Form1()
+        public AuthorizationsForm()
         {
             InitializeComponent();
         }
 
         private void connectbutton_Click(object sender, EventArgs e)
         {
-            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+            ServerReference.Service1Client client = new ServerReference.Service1Client();
             string name = inputbox.Text;
             string result = client.Hello(name) + " ";
             result += client.GetData();
