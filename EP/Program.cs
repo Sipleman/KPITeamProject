@@ -16,6 +16,8 @@ namespace EP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //AuthorizationsForm auth = new AuthorizationsForm();
+            //Application.Run(auth);
             Application.Run(new AuthorizationsForm());
         }
     }
