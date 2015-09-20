@@ -53,7 +53,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.97163F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.02837F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.Controls.Add(this.usernameBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.passwordBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.passwordlabel, 0, 2);
@@ -82,7 +82,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameBox.Location = new System.Drawing.Point(116, 50);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(139, 20);
+            this.usernameBox.Size = new System.Drawing.Size(138, 20);
             this.usernameBox.TabIndex = 2;
             // 
             // passwordBox
@@ -93,7 +93,7 @@
             this.passwordBox.Location = new System.Drawing.Point(116, 73);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(139, 20);
+            this.passwordBox.Size = new System.Drawing.Size(138, 20);
             this.passwordBox.TabIndex = 3;
             // 
             // passwordlabel
@@ -147,7 +147,7 @@
             this.appNameLabel.Location = new System.Drawing.Point(115, 2);
             this.appNameLabel.Margin = new System.Windows.Forms.Padding(2);
             this.appNameLabel.Name = "appNameLabel";
-            this.appNameLabel.Size = new System.Drawing.Size(141, 43);
+            this.appNameLabel.Size = new System.Drawing.Size(140, 43);
             this.appNameLabel.TabIndex = 5;
             this.appNameLabel.Text = "KPITeamProject";
             this.appNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,7 +171,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.logInButton.Location = new System.Drawing.Point(116, 258);
             this.logInButton.Name = "logInButton";
-            this.logInButton.Size = new System.Drawing.Size(139, 29);
+            this.logInButton.Size = new System.Drawing.Size(138, 29);
             this.logInButton.TabIndex = 7;
             this.logInButton.Text = "Log In";
             this.logInButton.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             this.nameCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameCheckBox.Location = new System.Drawing.Point(261, 50);
+            this.nameCheckBox.Location = new System.Drawing.Point(260, 50);
             this.nameCheckBox.MaximumSize = new System.Drawing.Size(12, 12);
             this.nameCheckBox.MinimumSize = new System.Drawing.Size(16, 16);
             this.nameCheckBox.Name = "nameCheckBox";
@@ -192,11 +192,14 @@
             // 
             // passwordCheckBox
             // 
-            this.passwordCheckBox.Location = new System.Drawing.Point(261, 73);
+            this.passwordCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.passwordCheckBox.Location = new System.Drawing.Point(260, 73);
             this.passwordCheckBox.MaximumSize = new System.Drawing.Size(16, 16);
             this.passwordCheckBox.MinimumSize = new System.Drawing.Size(12, 12);
             this.passwordCheckBox.Name = "passwordCheckBox";
-            this.passwordCheckBox.Size = new System.Drawing.Size(16, 12);
+            this.passwordCheckBox.Size = new System.Drawing.Size(16, 16);
             this.passwordCheckBox.TabIndex = 9;
             this.passwordCheckBox.TabStop = false;
             // 
