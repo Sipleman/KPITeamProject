@@ -12,14 +12,16 @@ namespace EP
 {
     public partial class AuthorizationsForm : Form
     {
+        DataBase.DataBaseClient client;
         public AuthorizationsForm()
         {
             InitializeComponent();
+            client = new DataBase.DataBaseClient();
         }
 
         private void logInButton_Click(object sender, EventArgs e)
         {
-            DataBase.DataBaseClient client = new DataBase.DataBaseClient();
+            //DataBase.DataBaseClient client = new DataBase.DataBaseClient();
             string username = usernameBox.Text;
             string password = passwordBox.Text;
             int tmpUserId = client.Authorizate(username, password);
@@ -52,6 +54,11 @@ namespace EP
                     this.Close();
                     break;
             }
+        }
+
+        private void registrationButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
