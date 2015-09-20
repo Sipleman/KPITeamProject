@@ -11,3 +11,9 @@ C:\Users\xoll\Documents\GitHub\KPITeamProject\Server\obj\Debug\Server.csprojReso
 C:\Users\xoll\Documents\GitHub\KPITeamProject\Server\obj\Debug\Server.dll
 C:\Users\xoll\Documents\GitHub\KPITeamProject\Server\obj\Debug\Server.pdb
 C:\Users\xoll\Documents\GitHub\KPITeamProject\Server\bin\Debug\MySql.Data.dll
+D:\KPITeamProject\Server\bin\Debug\Server.dll.config
+D:\KPITeamProject\Server\bin\Debug\Server.dll
+D:\KPITeamProject\Server\bin\Debug\Server.pdb
+D:\KPITeamProject\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\KPITeamProject\Server\obj\Debug\Server.dll
+D:\KPITeamProject\Server\obj\Debug\Server.pdb

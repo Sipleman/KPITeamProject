@@ -7,3 +7,12 @@ C:\Users\xoll\Documents\GitHub\KPITeamProject\EP\obj\Debug\FormClient.csprojReso
 C:\Users\xoll\Documents\GitHub\KPITeamProject\EP\obj\Debug\EP.AuthorizationsForm.resources
 C:\Users\xoll\Documents\GitHub\KPITeamProject\EP\obj\Debug\EP.Properties.Resources.resources
 C:\Users\xoll\Documents\GitHub\KPITeamProject\EP\obj\Debug\FormClient.csproj.GenerateResource.Cache
+D:\KPITeamProject\EP\bin\Debug\EP.exe.config
+D:\KPITeamProject\EP\obj\Debug\EP.exe
+D:\KPITeamProject\EP\obj\Debug\EP.pdb
+D:\KPITeamProject\EP\bin\Debug\EP.exe
+D:\KPITeamProject\EP\bin\Debug\EP.pdb
+D:\KPITeamProject\EP\obj\Debug\FormClient.csprojResolveAssemblyReference.cache
+D:\KPITeamProject\EP\obj\Debug\EP.AuthorizationsForm.resources
+D:\KPITeamProject\EP\obj\Debug\EP.Properties.Resources.resources
+D:\KPITeamProject\EP\obj\Debug\FormClient.csproj.GenerateResource.Cache
