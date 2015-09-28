@@ -22,11 +22,11 @@ bld/
 [Bb]in/
 [Oo]bj/
 
-EP/[Bb]in/
-EP/[Oo]bj/
+EP/[Bb]in/[Dd]ebug/
+EP/[Oo]bj/[Dd]ebug/
 
-Server/[Bb]in/
-Server/
+Server/[Bb]in/[Dd]ebug/
+Server/[Oo]bj/[Dd]ebug/
 
 # Visual Studio 2015 cache/options directory
 .vs/
