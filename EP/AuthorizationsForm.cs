@@ -31,7 +31,7 @@ namespace EP
                     {
                         usernameBox.Text = "";
                         passwordBox.Text = "";
-                        Bitmap fail = new Bitmap(@"..\..\images\fail.jpg");
+                        Bitmap fail = new Bitmap(@"..\..\images\fail1.png");
                         nameCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         passwordCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         nameCheckBox.Image = fail;
@@ -43,7 +43,7 @@ namespace EP
                     {
                         passwordBox.Text = "";
                         Bitmap suceed = new Bitmap(@"..\..\images\suceed.jpg");
-                        Bitmap fail = new Bitmap(@"..\..\images\fail.jpg");
+                        Bitmap fail = new Bitmap(@"..\..\images\fail1.png");
                         nameCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         passwordCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         nameCheckBox.Image = suceed;
@@ -52,7 +52,7 @@ namespace EP
                         break;
                     }
                 default:
-                    MessageBox.Show("Suceed!");
+                    MessageBox.Show("Succed!");
                     client.Close();
                     this.Close();
                     break;
@@ -87,6 +87,24 @@ namespace EP
             passwordBox.Text = "";
             usernameBox.Text = "";
             client.Close();
+        }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AuthorizationsForm_Load(object sender, EventArgs e)
+        {
+            NameLabel.Font = new Font("Eras Bold ITC", NameLabel.Font.Size);
+            PassLabel.Font = new Font("Eras Bold ITC", PassLabel.Font.Size);
+        }
+
+        private void registrationButton_Click_1(object sender, EventArgs e)
+        {
+            RegForm reg = new RegForm(this);
+            this.Hide();
+            reg.Show();
         }
     }
 }
