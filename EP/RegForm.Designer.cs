@@ -7,6 +7,7 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -41,7 +42,7 @@
             this.PassBox = new System.Windows.Forms.TextBox();
             this.ConfPassBox = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.registration = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BackButton
@@ -109,7 +110,6 @@
             this.ConfPassLabel.Size = new System.Drawing.Size(119, 16);
             this.ConfPassLabel.TabIndex = 5;
             this.ConfPassLabel.Text = "Confirm Password:";
-            this.ConfPassLabel.Click += new System.EventHandler(this.label5_Click);
             // 
             // LangLabel
             // 
@@ -185,15 +185,16 @@
             this.comboBox1.Size = new System.Drawing.Size(131, 21);
             this.comboBox1.TabIndex = 12;
             // 
-            // button1
+            // registration
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(179, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 33);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Sign up";
-            this.button1.UseVisualStyleBackColor = true;
+            this.registration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registration.Location = new System.Drawing.Point(179, 217);
+            this.registration.Name = "registration";
+            this.registration.Size = new System.Drawing.Size(95, 33);
+            this.registration.TabIndex = 13;
+            this.registration.Text = "Registration";
+            this.registration.UseVisualStyleBackColor = true;
+            this.registration.Click += new System.EventHandler(this.registration_Click);
             // 
             // RegForm
             // 
@@ -201,7 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::EP.Properties.Resources.lol;
             this.ClientSize = new System.Drawing.Size(347, 269);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.registration);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.ConfPassBox);
             this.Controls.Add(this.PassBox);
@@ -215,11 +216,13 @@
             this.Controls.Add(this.SndLabel);
             this.Controls.Add(this.FstLabel);
             this.Controls.Add(this.BackButton);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "RegForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegForm_FormClosing);
             this.Load += new System.EventHandler(this.RegForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -241,6 +244,6 @@
         private System.Windows.Forms.TextBox PassBox;
         private System.Windows.Forms.TextBox ConfPassBox;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button registration;
     }
 }

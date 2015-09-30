@@ -105,6 +105,7 @@ namespace EP
             RegForm reg = new RegForm(this);
             this.Hide();
             reg.Show();
+
         }
     }
 }
