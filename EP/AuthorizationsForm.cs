@@ -59,36 +59,6 @@ namespace EP
             }
         }
 
-        private void registrationButton_Click(object sender, EventArgs e)
-        {
-            DataBase.DataBaseClient client = new DataBase.DataBaseClient();
-            client.Open();
-            string username = usernameBox.Text;
-            string password = passwordBox.Text;
-            int tmpUserId = client.Registration(username, password);
-            switch (tmpUserId)
-            {
-                case -1:
-                    MessageBox.Show("Error of datatable querty");
-                    break;
-                case -2:
-                    MessageBox.Show("Error in secon query");
-                    break;
-                case -10:
-                    MessageBox.Show("Username already exist");
-                    break;
-                case -20:
-                    MessageBox.Show("Registration will failed");
-                    break;
-                default:
-                    MessageBox.Show("Succesfull registration");
-                    break;
-            }
-            passwordBox.Text = "";
-            usernameBox.Text = "";
-            client.Close();
-        }
-
         private void usernameBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -100,7 +70,7 @@ namespace EP
             PassLabel.Font = new Font("Eras Bold ITC", PassLabel.Font.Size);
         }
 
-        private void registrationButton_Click_1(object sender, EventArgs e)
+        private void registrationButton_Click(object sender, EventArgs e)
         {
             RegForm reg = new RegForm(this);
             this.Hide();

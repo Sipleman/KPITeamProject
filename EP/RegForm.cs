@@ -46,7 +46,7 @@ namespace EP
             string secondName = SndNmBox.Text ?? String.Empty;
             string password = PassBox.Text ?? String.Empty;
             string confirmPassword = ConfPassBox.Text ?? String.Empty;
-            string language = comboBox1.Text ?? String.Empty;
+            string language = comboBox1.Text;
             string message = "";
 
 
@@ -93,7 +93,28 @@ namespace EP
 
             if(flag == true)
             {
-                MessageBox.Show(firstName + '\n' + secondName + '\n' + username + '\n');
+                DataBase.DataBaseClient client = new DataBase.DataBaseClient();
+                try
+                {
+                    int tmpId = client.Registration(username, password, firstName, secondName, language);
+                    switch (tmpId)
+                    {
+                        case (-10):
+                            {
+                                MessageBox.Show("Пользователь с таким именем уже существует");
+                                break;
+                            }
+                        case (-20):
+                            {
+                                MessageBox.Show("Ошибка базы данных, регистрация не была оконченна");
+                                break;
+                            }
+                    }
+                }
+                catch(Exception exception)
+                {
+                    MessageBox.Show(exception.ToString());
+                }
                 this.Close();
             }
             else

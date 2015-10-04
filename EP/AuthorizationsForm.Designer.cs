@@ -159,7 +159,7 @@
             this.registrationButton.TabIndex = 8;
             this.registrationButton.Text = "Registration";
             this.registrationButton.UseVisualStyleBackColor = true;
-            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click_1);
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // pictureBox2
             // 
