@@ -34,40 +34,63 @@ namespace Server
 
         public int Authorizate(string username, string password)
         {
-            DataTable queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
-            if (queryResult == null || (queryResult.Rows.Count == 0))
-                return -1;
-            string passwordHash = GetMD5HashCode(password);
-            foreach (DataRow row in queryResult.Rows)
+            DataTable queryResult;
+            try
             {
-                if (passwordHash == (string)row["user_password"])
-                    return (int)row["id_user"];
+                queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
+                if (queryResult.Rows.Count == 0)
+                    return -1;
+                string passwordHash = GetMD5HashCode(password);
+                foreach (DataRow row in queryResult.Rows)
+                {
+                    if (passwordHash == (string)row["user_password"])
+                        return (int)row["id_user"];
+                }
+                return -2;
             }
-            return -2;
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return -400;
+            }
+
         }
 
         public int Registration(string username, string password, string firstName, string secondName, string language = null)
         {
-            DataTable queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
-            if (queryResult == null)
-                throw new Exception("SQL querty failed");
-            else if (queryResult.Rows.Count > 0)
-                return -10;
+            DataTable queryResult = null;
+            try
+            {
+                queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
+                if (queryResult.Rows.Count > 0)
+                    return -10;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return -400;
+            }
+
             string passwordHash = GetMD5HashCode(password);
 
-            queryResult = GetQuery(String.Format(
-                "insert into users(user_name, user_password, user_first_name, user_second_name, user_language) values ('{0}', '{1}', '{2}', '{3}', '{4}')"
-                ,username, passwordHash, firstName, secondName, language));
-            if (queryResult == null)
-                throw new Exception("incorrect sql query");
+            try
+            {
+                queryResult = GetQuery(String.Format(
+                    "insert into users(user_name, user_password, user_first_name, user_second_name, user_language) values ('{0}', '{1}', '{2}', '{3}', '{4}')"
+                    , username, passwordHash, firstName, secondName, language));
 
-            queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
-            if (queryResult == null)
-                throw new Exception("incorrect sql query");
-            if (queryResult.Rows.Count == 1)
-                return (int)queryResult.Rows[0]["id_user"];
-            else
-                return -20;
+                queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
+
+                if (queryResult.Rows.Count == 1)
+                    return (int)queryResult.Rows[0]["id_user"];
+                else
+                    return -20;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return -400;
+            }
         }
 
         private DataTable GetQuery(string query)
@@ -89,6 +112,8 @@ namespace Server
             {
                 Console.WriteLine(ex.ToString());
             }
+            if (dt == null)
+                throw new Exception("Invalid sql command");
             return dt;
         }
 
