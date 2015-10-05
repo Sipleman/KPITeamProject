@@ -25,10 +25,11 @@ namespace Server
                 if (!_connection.Ping())
                     Console.WriteLine("DataBase connection is failed");
                 _connection.Close();
+                Log.WriteMessage("Ping and open connection was succeed", "Start connection");
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Log.WriteMessage(ex.Message, "Start connection");
             }
         }
 
@@ -44,13 +45,16 @@ namespace Server
                 foreach (DataRow row in queryResult.Rows)
                 {
                     if (passwordHash == (string)row["user_password"])
+                    {
+                        Log.WriteMessage(username, "Authorizate");
                         return (int)row["id_user"];
+                    }
                 }
                 return -2;
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Log.WriteMessage(ex.Message, "Authorizate");
                 return -400;
             }
 
@@ -67,7 +71,7 @@ namespace Server
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Log.WriteMessage(ex.Message, "Registration");
                 return -400;
             }
 
@@ -82,13 +86,19 @@ namespace Server
                 queryResult = GetQuery(String.Format("select * from users where user_name='{0}'", username));
 
                 if (queryResult.Rows.Count == 1)
+                {
+                    Log.WriteMessage("Succeed new registration user", "Registration");
                     return (int)queryResult.Rows[0]["id_user"];
+                }
                 else
+                {
+                    Log.WriteMessage("Can't find new user in database", "Registration");
                     return -20;
+                }
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Log.WriteMessage(ex.Message, "Registration");
                 return -400;
             }
         }
@@ -110,7 +120,8 @@ namespace Server
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Log.WriteMessage(ex.Message, "Query");
+                return null;
             }
             if (dt == null)
                 throw new Exception("Invalid sql command");
