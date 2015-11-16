@@ -11,6 +11,7 @@
 *.userprefs
 
 # Build results
+[Ll]ogs/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -22,8 +23,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 
-EP/[Bb]in/[Dd]ebug/
-EP/[Oo]bj/[Dd]ebug/
+EP/bin/
+EP/obj/
 
 Server/[Bb]in/[Dd]ebug/
 Server/[Oo]bj/[Dd]ebug/

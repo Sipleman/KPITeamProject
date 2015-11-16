@@ -31,7 +31,7 @@ namespace EP
                     {
                         usernameBox.Text = "";
                         passwordBox.Text = "";
-                        Bitmap fail = new Bitmap(@"..\..\images\fail.jpg");
+                        Bitmap fail = new Bitmap(@"..\..\images\fail1.png");
                         nameCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         passwordCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         nameCheckBox.Image = fail;
@@ -43,7 +43,7 @@ namespace EP
                     {
                         passwordBox.Text = "";
                         Bitmap suceed = new Bitmap(@"..\..\images\suceed.jpg");
-                        Bitmap fail = new Bitmap(@"..\..\images\fail.jpg");
+                        Bitmap fail = new Bitmap(@"..\..\images\fail1.png");
                         nameCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         passwordCheckBox.SizeMode = PictureBoxSizeMode.StretchImage;
                         nameCheckBox.Image = suceed;
@@ -52,41 +52,30 @@ namespace EP
                         break;
                     }
                 default:
-                    MessageBox.Show("Suceed!");
+                    MessageBox.Show("Succed!");
                     client.Close();
                     this.Close();
                     break;
             }
         }
 
+        private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AuthorizationsForm_Load(object sender, EventArgs e)
+        {
+            NameLabel.Font = new Font("Eras Bold ITC", NameLabel.Font.Size);
+            PassLabel.Font = new Font("Eras Bold ITC", PassLabel.Font.Size);
+        }
+
         private void registrationButton_Click(object sender, EventArgs e)
         {
-            DataBase.DataBaseClient client = new DataBase.DataBaseClient();
-            client.Open();
-            string username = usernameBox.Text;
-            string password = passwordBox.Text;
-            int tmpUserId = client.Registration(username, password);
-            switch (tmpUserId)
-            {
-                case -1:
-                    MessageBox.Show("Error of datatable querty");
-                    break;
-                case -2:
-                    MessageBox.Show("Error in secon query");
-                    break;
-                case -10:
-                    MessageBox.Show("Username already exist");
-                    break;
-                case -20:
-                    MessageBox.Show("Registration will failed");
-                    break;
-                default:
-                    MessageBox.Show("Succesfull registration");
-                    break;
-            }
-            passwordBox.Text = "";
-            usernameBox.Text = "";
-            client.Close();
+            RegForm reg = new RegForm(this);
+            this.Hide();
+            reg.Show();
+
         }
     }
 }

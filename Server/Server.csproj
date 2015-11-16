@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DataBase.cs" />
     <Compile Include="IDataBase.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
