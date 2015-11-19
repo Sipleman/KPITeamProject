@@ -9,7 +9,7 @@ namespace Server
         [OperationContract]
         int Authorizate(string username, string password);
 
-        //[OperationContract]
-        //int Registration(string username, string password);
+        [OperationContract]
+        int Registration(string username, string password, string firstName, string secondName, string language = null);
     }
 }
